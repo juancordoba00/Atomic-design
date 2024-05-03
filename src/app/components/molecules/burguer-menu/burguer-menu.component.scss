@@ -1,0 +1,39 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+  .dropbtn {
+    background-color: #333;
+    color: #fff;
+    width: 50px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .dropdown-content {
+    display: none;
+    border-radius: 6px;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0px;
+    top: 50px;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .show {
+    display: block;
+  }
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #555;
+  border-radius: 6px;
+}

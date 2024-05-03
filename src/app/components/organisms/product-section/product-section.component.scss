@@ -1,0 +1,13 @@
+article {
+  h2 {
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    gap: 20px;
+  }
+}

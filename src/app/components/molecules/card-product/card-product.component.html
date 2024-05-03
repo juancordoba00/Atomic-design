@@ -1,0 +1,8 @@
+<section class="product">
+  <div class="image-container">
+    <img [src]="product.img" alt="Producto 1" />
+  </div>
+  <h2>{{ product.name }}</h2>
+  <p>{{ product.description }}</p>
+  <app-button [text]="'Agregar al carrito'" [typeButton]="'primary'"></app-button>
+</section>

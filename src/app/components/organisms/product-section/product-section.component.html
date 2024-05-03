@@ -1,0 +1,6 @@
+<article>
+  <h2>{{ productSection.title }}</h2>
+  <div class="product-list">
+    <app-card-product *ngFor="let product of productSection.products" [product]="product"></app-card-product>
+  </div>
+</article>

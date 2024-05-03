@@ -1,0 +1,15 @@
+<div class="dropdown">
+  <img
+    src="../assets/menu.png"
+    alt="Logo de la tienda"
+    class="dropbtn"
+    (click)="toggleDropdown()"
+    (keydown.enter)="toggleDropdown()"
+  />
+
+  <div class="dropdown-content" [ngClass]="{ show: dropdownOpen }">
+    <ul>
+      <app-list-item *ngFor="let item of items" [item]="item"></app-list-item>
+    </ul>
+  </div>
+</div>
