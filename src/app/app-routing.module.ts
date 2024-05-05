@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { WithAtomicDesignComponent } from './components/pages/with-atomic-design/with-atomic-design.component';
-import { WithoutAtomicDesignComponent } from './components/pages/without-atomic-design/without-atomic-design.component';
+import { LoginComponent } from './components/pages/login/login.component';
+import { LoginGuard } from './components/guards/feature-flag.guard';
 
 const routes: Routes = [
   {
-    path: 'without-atomic-design',
-    component: WithoutAtomicDesignComponent,
+    path: 'home',
+    loadChildren: () => import('./components/main.module').then(m => m.MainModule),
+    canActivate: [LoginGuard.canActivate()]
   },
   {
-    path: 'with-atomic-design',
-    component: WithAtomicDesignComponent,
+    path: 'login',
+    component: LoginComponent
   }
 ];
 
